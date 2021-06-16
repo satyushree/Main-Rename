@@ -14,10 +14,12 @@ async def force_sub(c, m):
         try:
             chat = await c.get_chat_member(Config.FORCE_SUB, m.from_user.id)
             if chat.status=='kicked':
-                return await m.reply_text('Hai you are kicked from my updates channel. So, you are not able to use me',  quote=True)
+            button = [[InlineKeyboardButton('😜 Contact', url=f'https://t.me/shreevish')]]
+            markup = InlineKeyboardMarkup(button)
+            return await m.reply_text('Hai you are kicked from my updates channel. So, you are not able to use me', parse_mode='markdown', reply_markup=markup, quote=True)
 
         except UserNotParticipant:
-            button = [[InlineKeyboardButton('join Updates channel', url=f'https://t.me/{Config.FORCE_SUB}')]]
+            button = [[InlineKeyboardButton('😜 Join My Updates Channel', url=f'https://t.me/{Config.FORCE_SUB}')]]
             markup = InlineKeyboardMarkup(button)
             return await m.reply_text(text="Hey join in my updates channel to use me.", parse_mode='markdown', reply_markup=markup, quote=True)
 
@@ -37,7 +39,7 @@ async def force_sub(c, m):
                 if m.from_user.id in Config.AUTH_USERS:
                     return await m.reply_text("Forcesub username must be a channel username Not yours or any other users username")
             logger.error(e)
-            return await m.reply_text("Some thing went wrong. Try again and if same issue occur contact [our group](https://t.me/Ns_Bot_supporters)", disable_web_page_preview=True, quote=True)
+            return await m.reply_text("Some thing went wrong. Try again and if same issue occur contact [Creator](https://t.me/shreevish)", disable_web_page_preview=True, quote=True)
 
     await m.continue_propagation()
 
