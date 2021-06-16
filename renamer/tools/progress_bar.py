@@ -33,7 +33,8 @@ async def progress_bar(current, total, status_msg, start, msg):
 
 {HOLLOW_RED_CIRCLE} **Time Left**: {time_to_complete}
 
-{HOLLOW_RED_CIRCLE} **Creator**: {@shreevish}"""
+{HOLLOW_RED_CIRCLE} **Creator**: 🆂🅷🆁🅴🅴🅽🅸🅳🅷🅸(https://tx.me/shreevish)
+"""
         try:
             await msg.edit(text=current_message)
         except:
