@@ -17,8 +17,8 @@ async def help(c, m, cb=False):
         InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
         InlineKeyboardButton(f'{MONEY_BAG} Donate', callback_data='donate')      
         ],[
-        InlineKeyboardButton(f'🧑‍💻 Cʀᴇᴀᴛᴏʀ', url=f"https://t.me/shreevish),
-        InlineKeyboardButton(f'🧑‍💻 Pᴀʀᴛɴᴇʀ', url=f"https://t.me/shreevish_1)
+        InlineKeyboardButton(text='🧑‍💻 Cʀᴇᴀᴛᴏʀ', url=f"https://t.me/shreevish),
+        InlineKeyboardButton(text='🧑‍💻 Pᴀʀᴛɴᴇʀ', url=f"https://t.me/shreevish_1)
         ],[
         InlineKeyboardButton(f'{NO_ENTRY} 𝙲𝚕𝚘𝚜𝚎', callback_data='close')
     ]]
