@@ -14,7 +14,7 @@ async def force_sub(c, m):
         try:
             chat = await c.get_chat_member(Config.FORCE_SUB, m.from_user.id)
             if chat.status=='kicked':
-            return await m.reply_text('Hai you are kicked from my updates channel. So, you are not able to use me', quote=True)
+                return await m.reply_text('Hai you are kicked from my updates channel. So, you are not able to use me',  quote=True)
 
         except UserNotParticipant:
             button = [[InlineKeyboardButton('😜 Join My Updates Channel', url=f'https://t.me/{Config.FORCE_SUB}')]]
