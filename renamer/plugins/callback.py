@@ -26,8 +26,8 @@ async def donate(c, m):
         InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
         InlineKeyboardButton(f'{ROBOT} About', callback_data='about')
         ],[
-        InlineKeyboardButton(f'{🧑‍💻} Cʀᴇᴀᴛᴏʀ', url=f"https://t.me/shreevish),
-        InlineKeyboardButton(f'{🧑‍💻} Pᴀʀᴛɴᴇʀ', url=f"https://t.me/shreevish_1)
+        InlineKeyboardButton(f'🧑‍💻 Cʀᴇᴀᴛᴏʀ', url=f"https://t.me/shreevish),
+        InlineKeyboardButton(f'🧑‍💻 Pᴀʀᴛɴᴇʀ', url=f"https://t.me/shreevish_1)
         ],[
         InlineKeyboardButton(f'{NO_ENTRY} Close', callback_data='close')
     ]]
