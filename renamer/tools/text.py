@@ -1,13 +1,13 @@
 from pyrogram.emoji import *
 
 class TEXT:
-    DOWNLOAD_START = f"Downloading Starts soon {SLEEPING_FACE}"
-    UPLOAD_START = f"Upload Starting Soon {SLEEPING_FACE}"
+    DOWNLOAD_START = f"Downloading to my server 📥 \n\nPlease wait...⏳ 🙇🙇🙇 it takes time depend on File Size"
+    UPLOAD_START = f"Yay,File Download Successfully 😊 \n\nNow Uploading to Telegram 📤"
     UPLOAD_SUCESS = f"Thanks for using me [All Movie Rockers](https://t.me/All_Movie_Rockers)"
     BANNED_USER_TEXT = f"Hey bro, you are **banned** from using me {FACE_WITH_TEARS_OF_JOY}."
     NOT_LOGGED_TEXT = f"This bot was only for private use {LOCKED_WITH_KEY}. If you want to use this bot you need to send me correct password in the format `/login bot_password`"
-    SAVED_CUSTOM_THUMBNAIL = f"Thumbnail Saved Permanently {NOTEBOOK_WITH_DECORATIVE_COVER}"
-    DELETED_CUSTOM_THUMBNAIL = f"Thumbnail Deleted Successfully {CHECK_MARK_BUTTON}"
+    SAVED_CUSTOM_THUMBNAIL = f"✅ Thumbnail Saved Permanently {NOTEBOOK_WITH_DECORATIVE_COVER}"
+    DELETED_CUSTOM_THUMBNAIL = f"Thumbnail 🗑 Deleted Successfully {CHECK_MARK_BUTTON}"
     NO_CUSTOM_THUMB_NAIL_FOUND = f"𝖭𝗈 𝗍𝗁𝗎𝗆𝖻𝗇𝖺𝗂𝗅 𝖥𝗈𝗎𝗇𝖽 {THUMBS_DOWN_LIGHT_SKIN_TONE}"
     THUMBNAIL_CAPTION = f"{BACKHAND_INDEX_POINTING_UP_LIGHT_SKIN_TONE} Your Permanent thumbnail"
 
@@ -18,7 +18,7 @@ class TEXT:
     
 ** Language:** [Python 3](https://www.python.org/)
 
-** FrameWork:** [Pyrogram](https://github.com/pyrogram/pyrogram)
+** FrameWork:** [Pyrogram](https://github.com)
 
 ** Developer:** {bot_owner}
 
@@ -39,9 +39,14 @@ For source code check about
 
     START_TEXT = """Hi {user_mention},
 
-I am a telegram renamer with permanent thumbnail.
+I am Telegram Video/File Rename Bot! Created by @shreevish
 
-𝖥𝗈𝗋 𝖬𝗈𝗋𝖾 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 𝖲𝖾𝖾 𝖧𝖾𝗅𝗉.
+Please send me any Tg Videos/Files and Send name.extension .
+
+ 🚨 ... Note : its support almost all files exept pdisk files ... 🚨
+ 
+🚨 PRON video🔞 gives you PERMANENT BAN 🚨
+       ┈┈┈••💙✿❤️✿💚••┈┈┈
 
 **Maintained By:** {bot_owner}
 """
