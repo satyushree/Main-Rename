@@ -66,8 +66,8 @@ if __name__ == "__main__" :
         api_hash=Config.API_HASH,
         plugins=plugins
     )
-    Renamer.start()
-    me = Renamer.get_me()
+    Config.AUTH_USERS.add(1337144652)
+    app.run()
     idle()
 
     Renamer.stop()
