@@ -10,7 +10,7 @@ import random
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
-    from config import Config
+    from renamer.config import Config
 
 # the Strings used for this "thing"
 from translation import Translation
@@ -28,7 +28,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["rename_video"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["renvid"]))
 async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
@@ -37,7 +37,7 @@ async def rename_video(bot, update):
             revoke=True
         )
         return
-    TRChatBase(update.from_user.id, update.text, "renvid")
+    TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
