@@ -37,6 +37,10 @@
             "description": "If you want to use the bot private you can set a password to use only by your.",
             "required": false
         },
+        "LOG_CHANNEL": {
+            "description": "Log channel's id.",
+            "value": ""
+        },
         "CUSTOM_CAPTION": {
             "description": "A default caption to be added to the file at bottom",
             "required": false
