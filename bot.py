@@ -25,7 +25,7 @@ if __name__ == "__main__" :
     if not os.path.isdir(Config.DOWNLOAD_LOCATION):
         os.makedirs(Config.DOWNLOAD_LOCATION)
     plugins = dict(
-        root="plugins"
+        root="renamer/plugins"
     )
     app = pyrogram.Client(
         "Renamer",
