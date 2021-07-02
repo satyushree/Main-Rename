@@ -19,7 +19,7 @@ from pyromod import listen
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
-    from config import Config
+    from renamer.config import Config
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -33,15 +33,14 @@ if __name__ == "__main__" :
         root="plugins"
     )
     app = pyrogram.Client(
-        "Renamer",
+        "[ARM] RENAME",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
         plugins=dict(root="renamer/plugins"),
                  workers=100)
     
-    Config.AUTH_USERS.add(1337144652)
-    app.run()
+    app.start()
 
 
 def main():
