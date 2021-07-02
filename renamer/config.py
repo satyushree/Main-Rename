@@ -12,7 +12,7 @@ class Config:
     AUTH_USERS = list(int(i) for i in os.environ.get("AUTH_USERS", "").split(" ")) if os.environ.get("AUTH_USERS", "") else []
     if OWNER_ID not in AUTH_USERS:
         AUTH_USERS.append(OWNER_ID)
-    BANNED_USERS = [int(i) for i in os.environ.get("BANNED_USERS", "").split(" ")] if os.environ.get("BANNED_USERS", "") else None
+    BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
     BOT_PASSWORD = os.environ.get("BOT_PASSWORD", "") if os.environ.get("BOT_PASSWORD", "") else None
     CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION") if os.environ.get("CUSTOM_CAPTION", "") else None
