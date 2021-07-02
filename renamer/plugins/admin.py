@@ -1,10 +1,7 @@
-import logging
-logger = logging.getLogger(__name__)
-
 import traceback
 import os
 
-from pyrogram import filters
+from pyrogram import Client as RenamerNs, filters
 
 from ..config import Config
 from ..screenshotbot import ScreenShotBot
