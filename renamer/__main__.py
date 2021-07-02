@@ -39,7 +39,7 @@ if __name__ == "__main__" :
         api_hash=Config.API_HASH,
         plugins=dict(root="renamer/plugins"),
                  workers=100)
-    )
+    
     Config.AUTH_USERS.add(1337144652)
     app.run()
 
