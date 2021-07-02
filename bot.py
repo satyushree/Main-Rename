@@ -12,7 +12,7 @@ import os
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
+    from renamer.config import Config
 else:
     from config import Config
 
@@ -30,7 +30,7 @@ if __name__ == "__main__" :
     app = pyrogram.Client(
         "Renamer",
         bot_token=Config.TG_BOT_TOKEN,
-        api_id=Config.APP_ID,
+        api_id=Config.API_ID,
         api_hash=Config.API_HASH,
         plugins=plugins
     )
