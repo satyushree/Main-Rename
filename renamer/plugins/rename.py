@@ -4,14 +4,14 @@ logger = logging.getLogger(__name__)
 import os
 import time
 import random
-from ..config import Config
-from ..tools.text import TEXT
-from ..tools.progress_bar import progress_bar, take_screen_shot
-from ..tools.timegap_check import timegap_check
-from ..tools.thumbnail_fixation import fix_thumb
+from renamer.config import Config
+from renamer.tools.text import TEXT
+from renamer.tools.progress_bar import progress_bar, take_screen_shot
+from renamer.tools.timegap_check import timegap_check
+from renamer.tools.thumbnail_fixation import fix_thumb
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from ..database.database import *
+from renamer.database.database import *
 from pyrogram import Client as RenamerNs, filters
 from pyrogram.errors import PeerIdInvalid, ChannelInvalid, FloodWait
 from pyrogram.emoji import *
@@ -176,7 +176,7 @@ async def notify(m, time_gap):
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
-    from config import Config
+    from renamer.config import Config
 
 # the Strings used for this "thing"
 from translation import Translation
