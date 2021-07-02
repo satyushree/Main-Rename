@@ -186,7 +186,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, filters
 
 from helper_funcs.chat_base import TRChatBase
-from tools.progress_bar import progress_bar
+from renamer.tools.progress_bar import progress_bar
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
