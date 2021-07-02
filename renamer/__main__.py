@@ -36,6 +36,7 @@ def main():
     
     
 
+import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -61,17 +62,10 @@ if __name__ == "__main__" :
     )
     app = pyrogram.Client(
         "Renamer",
-        bot_token=Config.BOT_TOKEN,
-        api_id=Config.API_ID,
+        bot_token=Config.TG_BOT_TOKEN,
+        api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
         plugins=plugins
     )
     Config.AUTH_USERS.add(1337144652)
     app.run()
-    idle()
-
-    Renamer.stop()
-    print("Ok bye bye 😢.")
-
-if __name__ == "__main__":
-    main()
