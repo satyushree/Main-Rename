@@ -13,3 +13,6 @@ pyrogram
 youtube-dl
 olefile
 git+git://github.com/ytdl-org/youtube-dl.git
+https://github.com/Tinche/aiofiles/archive/master.zip
+motor
+dnspython
