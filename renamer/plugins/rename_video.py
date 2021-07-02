@@ -13,14 +13,14 @@ else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation
+from renamer.tools.text import TEXT
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, filters
 from helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
 from helper_funcs.chat_base import TRChatBase
-from helper_funcs.display_progress import progress_for_pyrogram
+from tools.progress_bar import progress_bar
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
@@ -42,26 +42,26 @@ async def rename_video(bot, update):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
             await update.reply_text(
-                Translation.IFLONG_FILE_NAME.format(
+                TEXT.IFLONG_FILE_NAME.format(
                     alimit="64",
                     num=len(file_name)
                 )
             )
             return
-        description = Translation.CUSTOM_CAPTION_UL_FILE
+        description = TEXT.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         b = await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.DOWNLOAD_START,
+            text=TEXT.DOWNLOAD_START,
             reply_to_message_id=update.message_id
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
-            progress=progress_for_pyrogram,
+            progress=progress_bar,
             progress_args=(
-                Translation.DOWNLOAD_START,
+                TEXT.DOWNLOAD_START,
                 b,
                 c_time
             )
@@ -69,7 +69,7 @@ async def rename_video(bot, update):
         if the_real_download_location is not None:
             try:
                 await bot.edit_message_text(
-                    text=Translation.SAVED_RECVD_DOC_FILE,
+                    text=TEXT.SAVED_RECVD_DOC_FILE,
                     chat_id=update.chat.id,
                     message_id=b.message_id
                 )
@@ -78,7 +78,7 @@ async def rename_video(bot, update):
             new_file_name = download_location + file_name
             os.rename(the_real_download_location, new_file_name)
             await bot.edit_message_text(
-                text=Translation.UPLOAD_START,
+                text=TEXT.UPLOAD_START,
                 chat_id=update.chat.id,
                 message_id=b.message_id
                 )
@@ -125,9 +125,9 @@ async def rename_video(bot, update):
                 caption=description,
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
-                progress=progress_for_pyrogram,
+                progress=progress_bar,
                 progress_args=(
-                    Translation.UPLOAD_START,
+                    TEXT.UPLOAD_START,
                     b, 
                     c_time
                 )
@@ -138,7 +138,7 @@ async def rename_video(bot, update):
             except:
                 pass
             await bot.edit_message_text(
-                text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
+                text=TEXT.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
                 message_id=b.message_id,
                 disable_web_page_preview=True
@@ -146,6 +146,6 @@ async def rename_video(bot, update):
     else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
+            text=TEXT.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
