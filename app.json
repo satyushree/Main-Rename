@@ -48,6 +48,10 @@
         "OWNER_ID": {
             "description": "Your Telegram user id, Get this from @FileStore_Nsbot."
         },
+        "CHAT_BASE_TOKEN": {
+            "description": "Your chat base token, as a string.",
+            "value": ""
+        },
         "ENV": {
             "description": "Set it to anything to enable configuration by environment variables.",
             "value": "ANYTHING"
