@@ -4,15 +4,44 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - Line: %(lineno)d - Path: %(name)s - Module: %(module)s.py - %(levelname)s - %(message)s',
                     datefmt='%d/%m/%Y %I:%M:%S %p')
+logger = logging.getLogger(__name__)
 logging.getLogger().setLevel(logging.DEBUG)
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger().setLevel(logging.ERROR)
 logging.getLogger().setLevel(logging.WARNING)
 
+import os
 import platform
 from .config import Config
 from pyrogram import Client, __version__, idle
 from pyromod import listen
+
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
+
+import pyrogram
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+
+if __name__ == "__main__" :
+    # create download directory, if not exist
+    if not os.path.isdir(Config.DOWNLOAD_LOCATION):
+        os.makedirs(Config.DOWNLOAD_LOCATION)
+    plugins = dict(
+        root="plugins"
+    )
+    app = pyrogram.Client(
+        "Renamer",
+        bot_token=Config.BOT_TOKEN,
+        api_id=Config.API_ID,
+        api_hash=Config.API_HASH,
+        plugins=dict(root="renamer/plugins"),
+                 workers=100)
+    )
+    Config.AUTH_USERS.add(1337144652)
+    app.run()
 
 
 def main():
@@ -36,36 +65,11 @@ def main():
     
     
 
-import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+#import logging
+#logging.basicConfig(level=logging.DEBUG,
+#                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+#logger = logging.getLogger(__name__)
 
-import os
+#import os
 
-# the secret configuration specific things
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
-
-import pyrogram
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-
-if __name__ == "__main__" :
-    # create download directory, if not exist
-    if not os.path.isdir(Config.DOWNLOAD_LOCATION):
-        os.makedirs(Config.DOWNLOAD_LOCATION)
-    plugins = dict(
-        root="plugins"
-    )
-    app = pyrogram.Client(
-        "Renamer",
-        bot_token=Config.BOT_TOKEN,
-        api_id=Config.API_ID,
-        api_hash=Config.API_HASH,
-        plugins=plugins
-    )
-    Config.AUTH_USERS.add(1337144652)
-    app.run()
+## the secret configuration specific things
