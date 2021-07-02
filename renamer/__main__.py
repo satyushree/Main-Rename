@@ -29,16 +29,22 @@ if __name__ == "__main__" :
     plugins = dict(
         root="renamer/plugins"
     )
-    app = Client(
-        "[ARM] RENAME",
+    app = Client("[ARM] RENAME",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
         plugins=plugins
-    )
+        workers=100)
     
     app.start()
-
+   me = app.get_me()
+  
+  
+    startup_msg = f"Successfully deployed your Renamer at @{me.username}\n"
+    startup_msg += f"Pyrogram Version: V{__version__}\n"
+    startup_msg += f"Python Version: V{platform.python_version()}\n\n"
+    startup_msg += "Thanks for deploying our bot. Please give a star to my repo and join @All_Movie_Rockers."
+    print(startup_msg)
 
 def main():
 
