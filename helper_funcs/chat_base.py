@@ -12,12 +12,12 @@ import os
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
+    from renamer.config import Config
 else:
     from config import Config
 
 # the Strings used for this "thing"
-from translation import Translation
+from renamer.tools.text import TEXT
 
 from pyrogram import Client, filters
 
