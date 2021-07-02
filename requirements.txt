@@ -10,3 +10,6 @@ git+git://github.com/google/chatbase-python.git
 numpy
 requests
 pyrogram
+youtube-dl
+olefile
+git+git://github.com/ytdl-org/youtube-dl.git
