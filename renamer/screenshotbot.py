@@ -14,7 +14,7 @@ class ScreenShotBot(Client):
             api_hash = Config.API_HASH,
             workers = 20,
             plugins = dict(
-                root="bot/plugins"
+                root="renamer/plugins"
             )
         )
         
