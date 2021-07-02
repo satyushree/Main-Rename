@@ -1,4 +1,4 @@
-from sample_config import Config
+from renamer.config import Config
 
 class Translation(object):
     START_TEXT = """Hello <i><b>{}</b></i>,
