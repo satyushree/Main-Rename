@@ -186,7 +186,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, filters
 
 from helper_funcs.chat_base import TRChatBase
-from helper_funcs.display_progress import progress_for_pyrogram
+from tools.progress_bar import progress_bar
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
@@ -225,7 +225,7 @@ async def rename_doc(bot, update):
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
-            progress=progress_for_pyrogram,
+            progress=progress_bar,
             progress_args=(
                 TEXT.DOWNLOAD_START,
                 a,
@@ -278,7 +278,7 @@ async def rename_doc(bot, update):
                 caption=description,
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
-                progress=progress_for_pyrogram,
+                progress=progress_bar,
                 progress_args=(
                     TEXT.UPLOAD_START,
                     a, 
