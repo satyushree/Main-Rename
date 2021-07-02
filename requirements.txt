@@ -10,3 +10,4 @@ beautifulsoup4
 git+git://github.com/google/chatbase-python.git
 numpy
 requests
+pyrogram
