@@ -15,8 +15,8 @@ The given file name has {num} characters.
 <b>Essays Not allowed in Telegram file name!</b>
 ©️ <code>@All_Movie_Rockerst</code>
 Please short your file name and try again!"""
-     CUSTOM_CAPTION_UL_FILE = "@All_Movie_Rockers"
-     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
+    CUSTOM_CAPTION_UL_FILE = "@All_Movie_Rockers"
+    SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using [Anonymous](https://t.me/Ns_AnoNymouS)'s bot.**"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds."
     REPLY_TO_DOC_FOR_RENAME_FILE = "🤦‍♂️ Reply to a Telegram media to `/rendoc New Name.extension` with custom thumbnail support.\n\n(For uploading as file).\n\nSee /help for mor information. "
