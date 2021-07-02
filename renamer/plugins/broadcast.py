@@ -5,6 +5,7 @@ import string
 import random
 import time
 
+from pyrogram import Client as RenamerNs, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
 import aiofiles
