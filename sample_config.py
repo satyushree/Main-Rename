@@ -12,9 +12,11 @@ class Config(object):
     # Get these values from my.telegram.org
     OWNER_ID =  int(os.environ.get("OWNER_ID", ""))
     # Array to store users who are authorized to use the bot
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
+    AUTH_USERS = list(int(i) for i in os.environ.get("AUTH_USERS", "").split(" ")) if os.environ.get("AUTH_USERS", "") else []
+    if OWNER_ID not in AUTH_USERS:
+        AUTH_USERS.append(OWNER_ID)
     # Banned Unwanted Members..
-    BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
+    BANNED_USERS = [int(i) for i in os.environ.get("BANNED_USERS", "").split(" ")] if os.environ.get("BANNED_USERS", "") else None
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     # Telegram maximum file upload size
