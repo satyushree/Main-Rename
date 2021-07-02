@@ -37,8 +37,16 @@
             "description": "If you want to use the bot private you can set a password to use only by your.",
             "required": false
         },
+        "SESSION_NAME": {
+            "description": "Name you want to call your bot's session, Eg: bot username.",
+            "value": ""
+        }, 
         "LOG_CHANNEL": {
             "description": "Log channel's id.",
+            "value": ""
+        },
+        "HOST": {
+            "description": "Public URL of streaming service (https://github.com/TGExplore/musical-waddle)",
             "value": ""
         },
         "CUSTOM_CAPTION": {
