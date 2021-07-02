@@ -10,6 +10,11 @@ class TEXT:
     DELETED_CUSTOM_THUMBNAIL = f"Thumbnail 🗑 Deleted Successfully {CHECK_MARK_BUTTON}"
     NO_CUSTOM_THUMB_NAIL_FOUND = f"𝖭𝗈 𝗍𝗁𝗎𝗆𝖻𝗇𝖺𝗂𝗅 𝖥𝗈𝗎𝗇𝖽 {THUMBS_DOWN_LIGHT_SKIN_TONE}"
     THUMBNAIL_CAPTION = f"{BACKHAND_INDEX_POINTING_UP_LIGHT_SKIN_TONE} Your Permanent thumbnail"
+    IFLONG_FILE_NAME = """File Name limit allowed by Telegram is {alimit} characters.
+The given file name has {num} characters.
+<b>Essays Not allowed in Telegram file name!</b>
+©️ <code>@All_Movie_Rockerst</code>
+Please short your file name and try again!"""
 
 
     ABOUT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
