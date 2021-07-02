@@ -29,7 +29,7 @@ if __name__ == "__main__" :
     plugins = dict(
         root="renamer/plugins"
     )
-    app = pyrogram.Client(
+    app = Client(
         "[ARM] RENAME",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
