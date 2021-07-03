@@ -45,9 +45,9 @@ async def help(c, m, cb=False):
 async def start(c, m, cb=False):
     
         
-    if not await c.db.is_user_exist(m.chat.id):
-        await c.db.add_user(m.chat.id)
-        await c.db.send_message(
+    if not await c.is_user_exist(m.chat.id):
+        await c.add_user(m.chat.id)
+        await c.send_message(
             Config.LOG_CHANNEL,
             f"New User [{m.from_user.first_name}](tg://user?id={m.chat.id}) started."
         )
