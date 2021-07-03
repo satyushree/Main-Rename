@@ -62,28 +62,8 @@ class Database:
     
     async def update_as_round(self, id, as_round):
         await self.col.update_one({'id': id}, {'$set': {'as_round': as_round}})
-    
-    
-    async def update_watermark_text(self, id, watermark_text=''):
-        await self.col.update_one({'id': id}, {'$set': {'watermark_text': watermark_text}})
-    
-    
-    async def update_sample_duration(self, id, sample_duration):
-        await self.col.update_one({'id': id}, {'$set': {'sample_duration': sample_duration}})
-    
-    
-    async def update_watermark_color(self, id, watermark_color):
-        await self.col.update_one({'id': id}, {'$set': {'watermark_color': watermark_color}})
-    
-    
-    async def update_screenshot_mode(self, id, screenshot_mode):
-        await self.col.update_one({'id': id}, {'$set': {'screenshot_mode': screenshot_mode}})
-    
-    
-    async def update_font_size(self, id, font_size):
-        await self.col.update_one({'id': id}, {'$set': {'font_size': font_size}})
+
         
-    
     async def remove_ban(self, id):
         ban_status = dict(
             is_banned=False,
@@ -102,31 +82,6 @@ class Database:
             ban_reason=ban_reason
         )
         await self.col.update_one({'id': user_id}, {'$set': {'ban_status': ban_status}})
-    
-    
-    async def get_watermark_text(self, id):
-        user = await self.col.find_one({'id':int(id)})
-        return user.get('watermark_text', '')
-    
-    
-    async def get_sample_duration(self, id):
-        user = await self.col.find_one({'id':int(id)})
-        return user.get('sample_duration', 30)
-    
-    
-    async def get_watermark_color(self, id):
-        user = await self.col.find_one({'id':int(id)})
-        return user.get('watermark_color', 0)
-    
-    
-    async def get_screenshot_mode(self, id):
-        user = await self.col.find_one({'id':int(id)})
-        return user.get('screenshot_mode', 0)
-    
-    
-    async def get_font_size(self, id):
-        user = await self.col.find_one({'id':int(id)})
-        return user.get('font_size', 1)
     
     
     async def get_ban_status(self, id):
