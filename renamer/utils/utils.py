@@ -13,7 +13,7 @@ import traceback
 from pyrogram import InputMediaPhoto, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import FloodWait
 
-from ..config import Config
+from .config import Config
 
 
 
