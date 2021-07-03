@@ -116,7 +116,7 @@ class Database(BASE):
         user = await self.get_user(id)
         return user.get("last_used_on", datetime.date.today().isoformat())
     
-     async def get_user(self, id):
+    async def get_user(self, id):
         user = self.cache.get(id)
         if user is not None:
             return user
