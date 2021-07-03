@@ -13,7 +13,10 @@ import platform
 from renamer.config import Config
 from pyrogram import Client, __version__, idle
 from pyromod import listen
+from renamer.screenshotbot import ScreenShotBot
 
+if __name__ == "__main__":
+    ScreenShotBot().run()
 
 def main():
 
@@ -37,11 +40,3 @@ def main():
 
     Renamer.stop()
     print("Ok bye bye 😢.")
-
-if __name__ == "__main__":
-   logging.basicConfig(level=logging.DEBUG if Config.DEBUG else logging.INFO)
-    logging.getLogger("pyrogram").setLevel(
-        logging.INFO if Config.DEBUG else logging.WARNING
-    )
-
-    ScreenShotBot().run()
