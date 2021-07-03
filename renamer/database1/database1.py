@@ -16,12 +16,7 @@ class Database:
             id = id,
             join_date = datetime.date.today().isoformat(),
             as_file=False,
-            watermark_text='',
-            sample_duration=30,
             as_round=False,
-            watermark_color=0,
-            screenshot_mode=0,
-            font_size=1,
             ban_status=dict(
                 is_banned=False,
                 ban_duration=0,
