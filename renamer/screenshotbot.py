@@ -1,7 +1,5 @@
-import platform
-from renamer.config import Config
-from pyrogram import Client, __version__, idle
-from pyromod import listen
+  
+from pyrogram import Client
 
 from .config import Config
 from .database import Database
