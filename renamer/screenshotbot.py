@@ -2,7 +2,7 @@
 from pyrogram import Client
 
 from .config import Config
-from .database1 import Database
+from ..database1 import Database
 
 
 class ScreenShotBot(Client):
