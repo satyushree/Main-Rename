@@ -7,8 +7,8 @@ from .database1 import Database
 
 class ScreenShotBot(Client):
     
-    def __init__(self):
-        super().__init__(
+    def __ss__(self):
+        super().__ss__(
             session_name=Config.SESSION_NAME,
             bot_token = Config.BOT_TOKEN,
             api_id = Config.API_ID,
