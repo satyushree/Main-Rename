@@ -112,14 +112,14 @@ async def get_data(id):
             user_data = SESSION.query(Database).get(id)
         return user_data
     
+        user = await self.col.find_one({"id": int(id)})
+        self.cache[id] = user
+        return user
+    
  async def get_user(self, id):
         user = self.cache.get(id)
         if user is not None:
             return user
-
-        user = await self.col.find_one({"id": int(id)})
-        self.cache[id] = user
-        return user
     
 async def add_user(self, id):
         user = self.new_user(id)
