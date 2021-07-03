@@ -32,9 +32,9 @@ class Config:
     try:
         TRACE_CHANNEL = int(os.environ.get("TRACE_CHANNEL")) if os.environ.get("TRACE_CHANNEL", "") else None
     except:
-        TRACE_CHANNEL = None
+    TRACE_CHANNEL = None
         logger.warning("Trace channel id was invalid")
-   IAM_HEADER = os.environ.get("IAM_HEADER", "")
-   WORKER_COUNT = int(os.environ.get("WORKER_COUNT", 20))
-   TIMEOUT = int(os.environ.get("TIMEOUT", 60 * 30))
-   TRACK_CHANNEL = int(os.environ.get("TRACK_CHANNEL", False))
+    IAM_HEADER = os.environ.get("IAM_HEADER", "")
+    WORKER_COUNT = int(os.environ.get("WORKER_COUNT", 20))
+    TIMEOUT = int(os.environ.get("TIMEOUT", 60 * 30))
+    TRACK_CHANNEL = int(os.environ.get("TRACK_CHANNEL", False))
