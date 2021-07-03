@@ -166,7 +166,6 @@ async def del_user(id):
             return True
         else:
             return False
-
 async def get_data(id):
     try:
         user_data = SESSION.query(Database).get(id)
@@ -176,5 +175,5 @@ async def get_data(id):
             SESSION.commit()
             user_data = SESSION.query(Database).get(id)
         return user_data
-        finally:
+    finally:
         SESSION.close()
