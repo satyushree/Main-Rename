@@ -2,24 +2,24 @@
 I think this repo gonna become one of the best renamer open source 🥰.
 
 Please Give a ⭐ if you like this repo and also try following me for more best open source codes<br><br>
-[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes/blue?icon=github)](https://github.com/Ns-Bots/TG-RENAMER-BOT)
-[![Ask Me Anything !](https://img.shields.io/badge/🤔%20Ask%20me-anything-1abc9c.svg)](https://telegram.dog/Ns_AnoNymouS)
-[![Report Bugs!](https://badgen.net/badge/🐞%20Report%20/Bugs/red)](https://telegram.dog/Ns_AnoNymouS)
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes/blue?icon=github)](https://github.com/satyushree/Main-Rename)
+[![Ask Me Anything !](https://img.shields.io/badge/🤔%20Ask%20me-anything-1abc9c.svg)](https://telegram.dog/Shreevish)
+[![Report Bugs!](https://badgen.net/badge/🐞%20Report%20/Bugs/red)](https://telegram.dog/shreevish)
 
 ## Mapping
-[Deploy to Heroku 🗳](https://github.com/Ns-Bots/TG-RENAMER-BOT#deploy-to-heroku-)
+[Deploy to Heroku 🗳](https://github.com/satyushree/Main-Rename#deploy-to-heroku-)
 
-[Bot Features 🔥](https://github.com/Ns-Bots/TG-RENAMER-BOT#bot-features-)
+[Bot Features 🔥](https://github.com/satyushree/Main-Rename#bot-features-)
 
-[Required Vars 💥](https://github.com/Ns-Bots/TG-RENAMER-BOT#required-vars-)
+[Required Vars 💥](https://github.com/satyushree/Main-Rename#required-vars-)
 
-[Optional Vars 💬](https://github.com/Ns-Bots/TG-RENAMER-BOT#optional-vars-)
+[Optional Vars 💬](https://github.com/satyushree/Main-Rename#optional-vars-)
 
-[Available Commands 🤖](https://github.com/Ns-Bots/TG-RENAMER-BOT#available-commands-)
+[Available Commands 🤖](https://github.com/satyushree/Main-Rename#available-commands-)
 
-[Dev 🧑‍💻](https://github.com/Ns-Bots/TG-RENAMER-BOT#dev-)
+[Dev 🧑‍💻](https://github.com/satyushree/Main-Rename#dev-)
 
-[TODO 🤧](https://github.com/Ns-Bots/TG-RENAMER-BOT#todo-)
+[TODO 🤧](https://github.com/satyushree/Main-RenameT#todo-)
 
 [Thanks And Credits 🎉](https://github.com/Ns-Bots/TG-RENAMER-BOT#thanks-and-credits-)
 
@@ -84,11 +84,11 @@ login - (when password is given) to login to bot
 ## Dev 🧑‍💻
 <p align="middle">
 <img src="https://telegra.ph/file/c35579b3aef1248e2a130.jpg" width="250" height="350"><br>
-<img src="https://badgen.net/badge/Name/Anonymous/FF33FF?icon=awesome&labelColor=0080FF"></a>
+<a href="https://telegram.dog/shreevish"><img src="https://badgen.net/badge/Name/satyushree"></a>
 <img src="https://badgen.net/badge/Skills/python/purple?icon=terminal&labelColor=red"></a>
-<a href="https://telegram.dog/Ns_Anonymous"><img src="https://img.shields.io/badge/Telegram-Bot-blue.svg?logo=telegram"></a>
-<a href="https://github.com/Ns-AnoNymouS"><img src="https://badgen.net/badge/Follow%20on%20/GitHub/80FF00?icon=github&labelColor=black"></a>
-<a href="https://youtube.com/channel/UC9NnqJ63aSzv457iUMM06vQ"><img src="https://img.shields.io/badge/YouTube-Channel-FF3333.svg?logo=youtube&logoColor=FF3333"></a>
+<a href="https://github.com/satyushree"><img src="https://img.shields.io/badge/Telegram-Bot-blue.svg?logo=telegram"></a>
+<a href="https://github.com/satyushree"><img src="https://badgen.net/badge/Follow%20on%20/GitHub/80FF00?icon=github&labelColor=black"></a>
+<a href="https://www.youtube.com/channel/UCs2o6EQS27ul73t9vwtZKdQ"><img src="https://img.shields.io/badge/YouTube-Channel-FF3333.svg?logo=youtube&logoColor=FF3333"></a>
 <p align="left">
 </p>
 
@@ -103,3 +103,5 @@ login - (when password is given) to login to bot
 [Dan](https://telegram.dog/haskell) for his [Pyrogram](https://github.com/pyrogram/pyrogram)
 
 [MaheshMalekar ❤](https://telegram.dog/MaheshMalekar) for teaching me python
+
+[❤ Anonymous ❤](https://github.com/Ns-AnoNymouS) for his wonderful repo
