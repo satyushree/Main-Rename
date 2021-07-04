@@ -104,4 +104,4 @@ login - (when password is given) to login to bot
 
 [MaheshMalekar ❤](https://telegram.dog/MaheshMalekar) for teaching me python
 
-[❤ Anonymous ❤](https://github.com/Ns-AnoNymouS) for his wonderful repo
+[❤ Ns Bots ❤](https://github.com/Ns-Bots) for his wonderful repo
